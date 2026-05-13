@@ -6,8 +6,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
 
-#print(data.head())
-#print(data.columns)
 #print(data.keys())
 print(data.info())
 data = data[['GrLivArea', 'BedroomAbvGr', 'FullBath', 'SalePrice']]
@@ -22,6 +20,8 @@ print(X.head())
 
 # Print target
 print(y.head())
+
+#print(data.isnull().sum())
 
 # Split dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
@@ -51,5 +51,3 @@ plt.ylabel("Predicted Prices")
 plt.title("Actual vs Predicted House Prices")
 
 plt.show()
-#print(data.head())
-#print(data.isnull().sum())
